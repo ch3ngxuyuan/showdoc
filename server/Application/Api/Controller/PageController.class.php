@@ -33,6 +33,7 @@ class PageController extends BaseController {
 
         }
         $page['page_title']=htmlspecialchars_decode($page['page_title']);
+//        $page['page_content']=htmlspecialchars_decode($page['page_content']);
         $this->sendResult($page);
     }
     //删除页面
@@ -84,6 +85,7 @@ class PageController extends BaseController {
         if ($is_urlencode) {
             $page_content = urldecode($page_content);
         }
+        $page_content=htmlspecialchars($page_content);
         $data['page_title'] = $page_title ;
         $data['page_content'] = $page_content ;
         $data['page_comments'] = $page_comments ;
