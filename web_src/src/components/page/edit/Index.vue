@@ -62,6 +62,8 @@
         </el-form>
 
         <el-row class="fun-btn-group">
+          <el-button type="" size="medium" @click="insert_code_template">{{$t('insert_code_doc_template')}}</el-button>
+
           <el-button
             type
             size="medium"
@@ -152,6 +154,18 @@
     </el-container>
     <Footer></Footer>
     <div class></div>
+
+
+<div id="code-doc-templ"  ref="code_doc_templ" style="display:none">```
+
+```
+</div>
+<div id="code-doc-templ-en"  ref="code_doc_templ_en" style="display:none">```
+
+```
+</div>
+
+
   </div>
 </template>
 
@@ -369,6 +383,15 @@ export default {
         val = apiTemplateZh
       } else {
         val = apiTemplateEn
+      }
+      this.insertValue(val)
+    },
+    insert_code_template(){
+      var val
+      if (DocConfig.lang == 'zh-cn') {
+        val = this.$refs.code_doc_templ.innerHTML
+      } else {
+        val = this.$refs.code_doc_templ.innerHTML
       }
       this.insertValue(val)
     },

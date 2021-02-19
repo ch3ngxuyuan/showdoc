@@ -217,7 +217,7 @@ exports.default = {
   save_templ_title: 'Input template title',
   save_templ_text:
     'The template has been saved. When you create or edit an edit page later, click the "More Templates" button to use your saved template.',
-  welcome_use_showdoc: 'Welcome to ShowDoc！',
+  welcome_use_showdoc: '[TOC]\r\n',
   templ_list: 'Template list',
   templ_title: 'Template title',
   no_templ_text:
@@ -416,6 +416,8 @@ exports.default = {
 
   from_file_gub: 'From FileHub',
   file_gub: 'FileHub',
-  select: 'select'
+  select: 'select',
+
+  insert_code_doc_template:'Insert Code Doc template'
 
 }

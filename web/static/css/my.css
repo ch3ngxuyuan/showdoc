@@ -13,4 +13,8 @@
 /*头部间距*/
 #app > div > section > div.masthead.el-row > div.fun-btn-group.el-row{margin-top: 0;margin-bottom: 5px;}
 /*目录下拉框加高*/
-.el-select-dropdown__wrap{max-height: 600px;}
+.el-select-dropdown__wrap{max-height: 600px !important;}
+/*.container-narrow .masthead #editor-md{max-height: 850px}*/
+/*.CodeMirror{max-height: 850px}*/
+/*编辑器滚动条宽度*/
+.editormd ::-webkit-scrollbar{width:10px !important;}

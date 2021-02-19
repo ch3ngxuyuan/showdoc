@@ -212,7 +212,7 @@ exports.default = {
   save_templ_title: '请为要保存的模板设置标题',
   save_templ_text:
     '已经保存好模板。你以后新建或者编辑编辑页面时，点击“更多模板”按钮，便可以使用你保存的模板',
-  welcome_use_showdoc: '欢迎使用ShowDoc！',
+  welcome_use_showdoc: '[TOC]\r\n',
   templ_list: '模板列表',
   templ_title: '模板标题',
   no_templ_text:
@@ -406,5 +406,8 @@ exports.default = {
 
   from_file_gub: '从文件库选择',
   file_gub: '文件库',
-  select: '选择'
+  select: '选择',
+
+  insert_code_doc_template:'插入Code模板'
+
 }

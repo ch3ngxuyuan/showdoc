@@ -113,6 +113,14 @@ export default {
               'undo',
               'redo',
               '|',
+              'code-block',
+              'h1',
+              'h2',
+              'h3',
+              'h4',
+              'h5',
+              'h6',
+              'font',
               'bold',
               'del',
               'italic',
@@ -120,12 +128,6 @@ export default {
               '|',
               'toc',
               'mindmap',
-              'h1',
-              'h2',
-              'h3',
-              'h4',
-              'h5',
-              'h6',
               '|',
               'list-ul',
               'list-ol',
@@ -137,7 +139,6 @@ export default {
               'image',
               'video',
               'code',
-              'code-block',
               'table',
               'datetime',
               'html-entities',
@@ -157,7 +158,8 @@ export default {
             toc: 'fa-bars ', // 指定一个FontAawsome的图标类
             mindmap: 'fa-sitemap ', // 指定一个FontAawsome的图标类
             video: 'fa-file-video-o',
-            center: 'fa-align-center'
+            center: 'fa-align-center',
+            font: 'fa-adn'
           },
           // 自定义工具栏按钮的事件处理
           toolbarHandlers: {
@@ -204,6 +206,9 @@ export default {
               if (selection === '') {
                 cm.setCursor(cursor.line, cursor.ch + 1)
               }
+            },
+            font: function(cm, icon, cursor, selection) {
+              this.executePlugin('fontDialog', 'font-dialog/font-dialog')
             }
           },
           lang: {
@@ -211,7 +216,8 @@ export default {
               toc: '在最开头插入TOC，自动生成标题目录',
               mindmap: '插入思维导图',
               video: '插入视频',
-              center: '居中'
+              center: '居中',
+              font: '字体'
             }
           },
           onchange: () => {
@@ -478,7 +484,7 @@ export default {
     html_decode(str) {
       var s = ''
       if (str.length == 0) return ''
-      s = str.replace(/&gt;/g, '&')
+      s = str.replace(/&amp;/g, '&')
       s = s.replace(/&lt;/g, '<')
       s = s.replace(/&gt;/g, '>')
       s = s.replace(/&nbsp;/g, ' ')
