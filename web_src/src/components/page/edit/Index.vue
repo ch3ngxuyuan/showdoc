@@ -408,13 +408,17 @@ export default {
     },
     // 关闭预览
     editor_unwatch() {
-      let childRef = this.$refs.Editormd // 获取子组件
-      childRef.editor_unwatch()
-      if (sessionStorage.getItem('page_id_unwatch_' + this.page_id)) {
-      } else {
-        this.$message(this.$t('long_page_tips'))
-        sessionStorage.setItem('page_id_unwatch_' + this.page_id, 1)
-      }
+      this.$confirm(this.$t('long_page_tips'), '',{
+          showClose:false
+      }).then(()=>{
+        let childRef = this.$refs.Editormd // 获取子组件
+        childRef.editor_unwatch()
+        if (sessionStorage.getItem('page_id_unwatch_' + this.page_id)) {
+        } else {
+          sessionStorage.setItem('page_id_unwatch_' + this.page_id, 1)
+        }
+      }).catch(()=>{});
+
     },
     //
     editor_watch() {

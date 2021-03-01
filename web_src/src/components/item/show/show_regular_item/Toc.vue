@@ -33,7 +33,7 @@ export default {
       })
       // 监听展开事件
       $(document).on('click', '.markdown-toc', function(event) {
-        if (!$(event.target).is('a')) {
+        if (!$(event.target).is('a') && !$(event.target).is('font')) {
           $('.markdown-toc').toggleClass('open-list')
         }
       })

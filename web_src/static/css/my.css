@@ -4,7 +4,7 @@
 #header{height: 8px !important;}
 #left-side #left-side-menu{height: calc(100% - 10px)}
 #right-side > div.hello > div.op-bar{top:8px;}
-#right-side #page_md_content #editor-md > div{top:130px}
+#right-side #page_md_content #editor-md > div{top:130px;height:0;background: #6596f921;border-radius: 50%;}
 #right-side .page_content_main .markdown-toc > .markdown-toc-list{max-height: 720px;}
 
 /*编辑文章*/
