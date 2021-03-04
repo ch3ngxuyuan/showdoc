@@ -2,9 +2,11 @@
 
 /*显示页面布局调整*/
 #header{height: 8px !important;}
+/*左边目录高度*/
 #left-side #left-side-menu{height: calc(100% - 10px)}
+/*右边导航*/
 #right-side > div.hello > div.op-bar{top:8px;}
-#right-side #page_md_content #editor-md > div{top:130px;height:0;background: #6596f921;border-radius: 50%;}
+#editor-md > div.markdown-toc.editormd-markdown-toc,#editor-md > div.markdown-toc.editormd-markdown-toc.open-list{top:130px;height:0;background: #6596f921;border-radius: 50%;}
 #right-side .page_content_main .markdown-toc > .markdown-toc-list{max-height: 720px;}
 
 /*编辑文章*/
